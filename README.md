@@ -12,7 +12,7 @@ A simple task list application built with **Next.js**, **TypeScript** and **Tail
 
 ## Learnings
 
-- AAdd tasks
+- Add tasks
 - Mark tasks as completed
 - Remove tasks
 - Automatic saving in the browser (localStorage)
