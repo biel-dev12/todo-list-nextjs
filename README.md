@@ -1,23 +1,25 @@
 # To-Do List App
 
-Aplicativo simples de lista de tarefas feito com **Next.js**, **TypeScript** e **Tailwind CSS**.
+AA simple task list application built with **Next.js**, **TypeScript** and **Tailwind CSS**.
 
-## Tecnologias
+**Live demo [View on Vercel](https://todo-list-nextjs-6yh5j5jzr-biel-dev12s-projects.vercel.app)
+
+## Technologies
 
 - [Next.js](https://nextjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
 
-## Funcionalidades
+## Learnings
 
-- Adicionar tarefas
-- Marcar tarefas como concluídas
-- Remover tarefas
-- Salvamento automático no navegador (localStorage)
+- AAdd tasks
+- Mark tasks as completed
+- Remove tasks
+- Automatic saving in the browser (localStorage)
 
-## 🧠 Aprendizados
+## Aprendizados
 
-- Componentização com React + TS
-- Persistência com localStorage
-- Estilização com Tailwind
-- Boas práticas com commits semânticos e documentação
+- Component-based architecture with React + TypeScript
+- Data persistence with localStorage
+- Styling with Tailwind CSS
+- Best practices with semantic commits and proper documentation
