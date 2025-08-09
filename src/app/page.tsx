@@ -1,24 +1,24 @@
 "use client";
 
 import Header from "@/components/Header";
-import TaskForm, { Task } from "@/components/TaskForm";
+import TaskForm from "@/components/TaskForm";
 import TaskItem from "@/components/TaskItem";
-import React, { useEffect, useState } from "react";
+import { Task } from "@/types/task";
+import React, { useEffect, useMemo, useState } from "react";
 
 export default function Home() {
   const [tasks, setTasks] = useState<Task[]>([]);
 
   useEffect(() => {
-    const savedTasks = localStorage.getItem("tasks")
-    if(savedTasks) {
-      setTasks(JSON.parse(savedTasks))
+    const savedTasks = localStorage.getItem("tasks");
+    if (savedTasks) {
+      setTasks(JSON.parse(savedTasks));
     }
-  }, [])
+  }, []);
 
   useEffect(() => {
-    localStorage.setItem("tasks", JSON.stringify(tasks))
-  }, [tasks])
-
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+  }, [tasks]);
 
   const toggleTaskActive = (id: string) => {
     setTasks((prevTask) =>
@@ -32,12 +32,12 @@ export default function Home() {
     setTasks((prevTasks) => prevTasks.filter((task) => task.id !== id));
   };
 
-  const sortedTasks = [...tasks].sort((a, b) => {
-    if (a.active === b.active) return 0;
-    if (a.active && !b.active) return -1;
-    if (!a.active && b.active) return 1;
-    return 0
-  });
+  const sortedTasks = useMemo(() => {
+    return [...tasks].sort((a, b) => {
+      if (a.active === b.active) return 0;
+      return a.active ? -1 : 1;
+    });
+  }, [tasks]);
 
   return (
     <div className="flex flex-col items-center mt-10">

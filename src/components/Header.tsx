@@ -5,6 +5,7 @@ export default function Header() {
         Developed by{" "}
         <a
           href="https://www.linkedin.com/in/gabriel-abreu-de-carvalho-862a3626b/"
+          aria-label="Abrir LinkedIn do desenvolvedor"
           target="_blank"
           rel="noopener noreferrer"
           className="font-semibold text-blue-600 hover:underline"

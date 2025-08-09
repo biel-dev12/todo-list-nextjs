@@ -27,6 +27,7 @@ export default function TaskItem({
       </div>
       <Button
         background={ButtonSettings.red}
+        typeBtn="button"
         onClick={(e) => {
           e.stopPropagation();
           removeTask();

@@ -3,12 +3,7 @@
 import { useState } from "react";
 import { v4 as uuidv4 } from 'uuid';
 import Button, { ButtonSettings } from "./Button";
-
-export interface Task {
-  id: string
-  taskDesc: string
-  active: boolean
-}
+import { Task } from "@/types/task";
 
 interface TaskFormProps {
   setTasksState: React.Dispatch<React.SetStateAction<Task[]>>
@@ -47,7 +42,7 @@ export default function TaskForm({setTasksState, tasksState}: TaskFormProps) {
           focus:border-green-500
           w-70 sm:w-100 lg:w-120"
       />
-      <Button background={ButtonSettings.green}>+ Add</Button>
+      <Button background={ButtonSettings.green} typeBtn="submit">+ Add</Button>
     </form>
   );
 }
