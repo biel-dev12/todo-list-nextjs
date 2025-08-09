@@ -1,6 +1,6 @@
 # To-Do List App
 
-AA simple task list application built with **Next.js**, **TypeScript** and **Tailwind CSS**.
+A simple task list application built with **Next.js**, **TypeScript** and **Tailwind CSS**.
 
 **Live demo:** [View on Vercel](https://todo-list-nextjs-6yh5j5jzr-biel-dev12s-projects.vercel.app)
 
